@@ -1,0 +1,160 @@
+Caso de Uso: Cadastrar/Login
+Ator: Usuário
+Descrição: O usuário cadastra uma nova conta ou faz login em uma conta existente no aplicativo
+Pré-Condição: O aplicativo estar instalado e em funcionamento
+Fluxo Principal:
+1. O Usuário abre o aplicativo.
+2. O Usuário seleciona a opção cadastrar ou fazer login.
+3.O Usuário escolhe cadastrar
+4.O Usuário escolhe login
+ 4.1 O Usuário coloca e-mail e senha.
+ 4.2 O Sistema verifica as credencias e autentica o Usuário.
+ 4.3 O Sistema exibe a tela principal do aplicativo.
+Pós-Condição: o Usuário estar autenticado no Aplicativo.
+Fluxo Alternativo:
+3a. O Usuário preenche os campos de nome, e-mail e senha.
+ - O Sistema valida e cria uma nova conta.
+ - O Sistema exibe uma mensagem de cadastro confirmado.
+4a O Usuário coloca e-mail e senha.
+ - O Sistema verifica as credencias e autentica o Usuário.
+ - O Sistema exibe a tela principal do aplicativo.
+
+Fluxo de Exceção:
+4a. Se o Usuário fazer login e esquecer a senha:
+ - O Usuário seleciona a opção “Esqueci minha senha”.
+ - O Sistema solicita o e-mail cadastrado.
+ - O Sistema envia um e-mail para redefinir a senha.
+- O Usuário segue as instruções para redefinir a senha.
+
+
+
+  
+
+
+Caso de Uso: Agendar Limpeza
+Ator: Usuário e Robô de Limpeza Inteligente
+Descrição: O Usuário agenda uma limpeza automática para o Robô de Limpeza Inteligente em uma data e hora específicas.
+Pré-Condição: Usuário estar autenticado no aplicativo.
+Fluxo Principal:
+1. O Usuário acessa o aplicativo.
+2. O Usuário seleciona a opção de agendar limpeza.
+3.O Usuário escolhe a data e hora desejadas.
+4. O aplicativo envia os detalhes do agendamento ao sistema.
+5. O sistema registra o agendamento.
+6. O sistema programa o Robô para iniciar a limpeza no horário agendado.
+Pós-Condição: O agendamento é registrado e confirmado no sistema.
+Fluxo Alternativo:
+3a. Se a data escolhida for inválida (passada ou em menos de X minutos a partir do momento atual):
+- O sistema exibe uma mensagem de erro.
+- O Usuário seleciona outra data e hora válidas.
+
+Caso de Uso: Iniciar/Parar Limpeza
+Ator: Usuário e Robô de Limpeza Inteligente
+Descrição: O Usuário inicia ou para a limpeza automática do Robô de Limpeza Inteligente.	
+Pré-Condição: Usuário estar autenticado no aplicativo.
+Fluxo Principal:
+1. O Usuário acessa o aplicativo.
+2. O Usuário escolhe a opção de iniciar ou parar a limpeza.
+3. O aplicativo envia o comando correspondente ao sistema.
+4. O sistema envia o comando para o Robô.
+5. O Robô inicia ou interrompe a limpeza conforme o comando recebido.
+Pós-Condição: A limpeza é iniciada ou interrompida conforme o comando.
+Fluxo Alternativo:
+2a. Se o Robô já estiver em processo de limpeza:
+- O sistema exibe uma mensagem informando que a limpeza já está em andamento.
+2b. Se o Robô não estiver em processo de limpeza:
+- O sistema exibe uma mensagem informando que a limpeza não está em andamento.
+
+Caso de Uso: Selecionar Modo de Limpeza
+Ator: Usuário e Robô de Limpeza Inteligente
+Descrição: O Usuário escolhe um modo de limpeza (varrer, aspirar, esfregar) para o Robô de Limpeza Inteligente.
+Pré-Condição: Usuário estar autenticado no aplicativo.
+Fluxo Principal:
+1. O Usuário acessa o aplicativo.
+2. O Usuário seleciona a opção de escolher modo de limpeza.
+3. O Usuário escolhe entre os modos disponíveis.
+4. O aplicativo envia a seleção do modo ao sistema.
+5. O sistema envia o modo escolhido ao Robô.
+6. O Robô ajusta suas ações de limpeza de acordo com o modo selecionado.
+Pós-Condição: O Robô ajusta suas ações de limpeza de acordo com o modo selecionado.
+Fluxo Alternativo:
+3a. Se o Usuário escolher um modo inválido:
+- O sistema exibe uma mensagem de erro.
+- O Usuário seleciona um modo válido.
+
+Caso de Uso: Receber Status do Robô
+Ator: Usuário
+Descrição: O Usuário recebe informações sobre o status da limpeza e do Robô de Limpeza Inteligente.
+Pré-Condição: Usuário estar autenticado no aplicativo.
+Fluxo Principal:
+1. O Usuário acessa o aplicativo.
+2. O Usuário seleciona a opção de receber status do Robô.
+3. O aplicativo solicita informações do sistema sobre o status do Robô.
+4. O sistema obtém informações do Robô, como progresso da limpeza e nível de bateria.
+5. O sistema envia as informações ao aplicativo.
+6. O aplicativo exibe as informações ao Usuário.
+Pós-Condição: As informações de status são exibidas ao Usuário.
+Fluxo Alternativo:
+3a. Se não houver comunicação entre o aplicativo e o Robô:
+- O sistema exibe uma mensagem de erro de conexão.
+4a. Se não houver informações disponíveis sobre o status do Robô:
+- O sistema exibe uma mensagem informando que o status não está disponível.
+
+Caso de Uso: Configurar Preferências
+Ator: Usuário
+Descrição: O Usuário personaliza as configurações do Robô de Limpeza Inteligente, como modos de limpeza preferidos e agendamentos.
+Pré-Condição: Usuário estar autenticado no aplicativo.
+Fluxo Principal:
+1. O Usuário acessa o aplicativo.
+2. O Usuário seleciona a opção de configurar preferências.
+3. O Usuário define os modos de limpeza preferidos, horários de limpeza agendados e outras configurações.
+4. O aplicativo envia as preferências ao sistema.
+5. O sistema aplica as configurações ao Robô.
+Pós-Condição: As preferências são configuradas no Robô.
+Fluxo Alternativo:
+4a. Se o Usuário tentar configurar preferências inválidas:
+- O sistema exibe mensagens de erro específicas.
+- O Usuário corrige as configurações inválidas.
+
+Caso de Uso para o Aplicativo: Usar App
+Ator: Usuário e robô de limpeza inteligente
+Descrição: O Usuário interage com o aplicativo para controlar e monitorar o Robô de Limpeza Inteligente, bem como configurar suas preferências.
+Pré-Condição: Usuário estar autenticado no aplicativo.
+Fluxo Principal:
+1. O Usuário abre o aplicativo.
+2. O Usuário é apresentado com a tela inicial do aplicativo.
+3. O Usuário navega pelas opções disponíveis no aplicativo.
+4. O Usuário seleciona uma opção específica, como agendar limpeza, iniciar/parar limpeza, escolher modo de limpeza, receber status ou configurar preferências.
+5. O aplicativo exibe a interface relevante de acordo com a opção selecionada.
+6. O Usuário insere as informações necessárias ou faz a seleção desejada.
+7. O aplicativo envia os comandos ou preferências ao sistema.
+8. O sistema processa os comandos ou atualiza as preferências do Usuário.
+9. O sistema interage com o Robô de Limpeza Inteligente conforme as instruções.
+10. O aplicativo exibe as atualizações de status, informações de limpeza ou confirmação de ação para o Usuário.
+Pós-Condição: As ações do Usuário são executadas e as informações são atualizadas no sistema.
+Fluxo Alternativo:
+4a. Se o aplicativo não conseguir enviar os comandos ou preferências ao sistema:
+- O sistema exibe uma mensagem de erro de comunicação.
+9a. Se o sistema não conseguir interagir com o Robô conforme as instruções:
+- O sistema exibe uma mensagem de erro de comunicação com o Robô.
+
+Caso de uso: Pagamento
+Autor: Usuário
+Descrição: O Usuário realiza um pagamento pelo uso do serviço do Robô de Limpeza Inteligente.
+Pré-Condição: O Usuário estar autenticado no aplicativo e solicitou um serviço de limpeza.
+Fluxo Principal: 
+1. O Usuário estar na tela principal do aplicativo.
+2. O Usuário seleciona a opção de agendar limpeza.
+3. O Usuário escolhe os detalhes da limpeza, como data, horário, e o modo de limpeza.
+4. O Aplicativo calcula o custo da limpeza.
+5. O Usuário confirma os detalhes e custos da limpeza.
+6. O Aplicativo solicita as informações de pagamento.
+7. O usuário insere os detalhes de pagamento.
+8. O Sistema verifica as informações e processa o pagamento.
+9. O Sistema registra o pagamento e confirma a reserva da limpeza.
+10. O aplicativo exibe uma confirmação de pagamento e detalhes da limpeza agendada.
+
+Fluxo Alternativo:
+7a. Se o Sistema não conseguir validar os dados do pagamento:
+ - O Sistema exibe uma mensagem de erro.
+ - O Usuário corrige os dados e tenta novamente.
