@@ -1,0 +1,30 @@
+Projeto: Sistema Avançado de Robôs de Limpeza Inteligente
+
+Objetivo do Projeto:
+O objetivo deste projeto é desenvolver uma nova geração de robôs de limpeza inteligente que sejam capazes de realizar a limpeza de ambientes de forma eficiente, autônoma e adaptável. O sistema incorporará tecnologias avançadas, como inteligência artificial, visão computacional e aprendizado de máquina, para oferecer uma experiência de limpeza inovadora que atenda às necessidades dos usuários e otimize a eficiência da limpeza doméstica e comercial.
+
+ Requisitos Funcionais:
+RQF1: Os robôs serão capazes de mapear ambientes, evitar obstáculos e criar rotas eficientes para limpeza automática.
+RQF2: Os robôs deverão ser equipados com sensores para detectar áreas sujas e concentrar a limpeza onde for necessário.
+RQF3: Os robôs serão projetados para limpar diferentes tipos de superfícies, como pisos duros, carpetes e azulejos.
+RQF4: A plataforma permitirá aos usuários escolherem entre modos de limpeza, como varrer, aspirar e esfregar.
+RQF5: O sistema utilizará IA para aprender os padrões de limpeza dos ambientes e adaptar suas ações com o tempo.
+RQF6: Os usuários poderão agendar horários de limpeza automáticos de acordo com suas preferências.
+RQF7: Os robôs poderão ser controlados remotamente através de aplicativos móveis ou comandos de voz.
+RQF8: Os robôs retornarão automaticamente à estação de recarga quando a bateria estiver fraca.
+RQF9: O sistema deve processar pagamentos recorrentes para assinaturas de serviço, cobrando automaticamente taxas de assinatura em intervalos regulares.
+
+
+Requisitos Não Funcionais:
+RQFN1: Os robôs devem ter um desempenho consistente na limpeza, cobrindo efetivamente a área designada.
+RQFN2: A bateria deve durar o suficiente para concluir a limpeza de um ambiente médio antes de precisar ser recarregada.
+RQFN3: Os robôs devem ser projetados com recursos de segurança para evitar colisões com objetos ou pessoas.
+RQFN4: Os robôs devem ser capazes de se adaptar a diferentes tipos de ambientes, como casas, escritórios e espaços comerciais.
+RQFN5: A conectividade com dispositivos móveis deve ser confiável para permitir o controle e monitoramento remotos.
+RQFN6: Os componentes do robô devem ser de fácil acesso para manutenção e substituição quando necessário.
+RQFN7: O sistema deve ser projetado para permitir atualizações de software e incorporação de novas funcionalidades com o tempo.
+RQFN8: Os materiais e métodos de fabricação devem considerar princípios de sustentabilidade.
+RQFN9: Todas as informações de pagamento devem ser armazenadas e processadas com alta segurança, seguindo padrões como o PCI DSS, para proteger os dados financeiros dos usuários contra acesso não autorizado e garantir a conformidade com regulamentos de privacidade de dados.
+
+
+Este projeto inovador visa simplificar a rotina de limpeza de residências e espaços comerciais por meio de robôs inteligentes, aumentando a eficiência e a comodidade para os usuários. A integração de tecnologias avançadas garantirá uma experiência de limpeza autônoma e personalizada.
