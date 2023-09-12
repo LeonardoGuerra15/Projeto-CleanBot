@@ -1,65 +1,59 @@
+Nome do projeto: CleanBot
+
 Nome da Classe: RoboLimpeza
 Descrição: Esta classe representa um robô de limpeza inteligente usado em ambientes domésticos. Ela armazena informações importantes sobre o estado e configurações do robô.
 Atributos:
-IdRobo: Um número inteiro que identifica unicamente o robô.
 EstadoRobo: Uma string que indica o estado atual do robô, como "Ligado" ou "Desligado".
 Bateria: Um inteiro que representa o nível atual de bateria do robô (em porcentagem).
-ModoLimpeza: Uma string que define o modo de limpeza atual do robô, como "Modo Padrão" ou "Modo Silencioso".
 MapaAmbiente: Uma string que descreve o mapa do ambiente onde o robô está operando.
-Ambiente: Uma string que especifica o tipo de ambiente onde o robô está, como "Sala de Estar" ou "Cozinha".
-Usuario: Uma string que identifica o usuário responsável pelo robô.
 Métodos:
 IniciarLimpeza(): Este método inicia a limpeza e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
 PararLimpeza(): Este método para a limpeza em andamento e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
-AgendarLimpeza():Agenda uma limpeza futura e retorna a data agendada.
 RetornarEstacaoRecarga():Retorna a estação de recarga mais próxima.
-ConfigurarModoLimpeza():Este método configura o modo de limpeza e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
 DetectarSujeira():Este método detecta sujeira no ambiente e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
-EnviarComandosParaRobo():Este método envia comandos específicos para o robô e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
 ReceberStatus():Retorna o status atual do robô, incluindo informações como o estado, nível de bateria e modo de limpeza.
 
 Associação: O robô de limpeza está associado a tudo, pelo fato de ser funcionamento, com isso sua associação é ligada ao aplicativo pois ele quem comanda e mande o que precisa ser realizado, com o sistema pois que foi programado, foi o sistema quem desenvolveu, com o ambiente pois realiza o mapeamento da área em que vai ser limpa, e com o usuário seria indiretamente pelo fato que apenas vai realizar o serviço que foi pedido.
 
 
+
+
+
+
+
+
+
 Nome da Classe: Sistema
 Descrição: Esta classe representa o sistema responsável por gerenciar os robôs de limpeza, usuários, ambientes e o aplicativo associado.
 Atributos:
-RobôLimpeza: Um inteiro que identifica o robô de limpeza associado ao sistema.
-Usuário: Uma string que especifica o usuário do sistema.
-Ambiente: Uma string que descreve o ambiente ou local onde o sistema está operando.
 Aplicativo: Uma string que indica o aplicativo associado ao sistema.
 Métodos:
-ProcessarAgendamentos():Este método processa os agendamentos de limpeza programados para os robôs de limpeza no sistema e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
 AtualizarStatus(): Este método atualiza o status dos robôs de limpeza e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
 GerarRelatorios(): Este método gera relatórios relevantes, como relatórios de atividade dos robôs de limpeza ou relatórios de status, e retorna essas informações como uma string.
 
 Associação: O sistema está diretamente associado ao robô de limpeza, pois ele que programa o robô para fazer todas as suas funções. 
 
-
 Nome da Classe: Ambiente
 Descrição: Esta classe representa um ambiente ou local onde um robô de limpeza pode operar. Ela armazena informações sobre a identificação do ambiente, o nome do ambiente e o tipo de superfície presente.
 Atributos:
-IdAmbiente : Um número inteiro que identifica unicamente o ambiente.
 NomeAmbiente: Uma string que especifica o nome do ambiente, como "Sala do diretor" ou "Copa".
 TipoSuperficie: Uma string que descreve o tipo de superfície presente no ambiente, como "Piso de Madeira" ou "Tapete".
+
+Dimensao : Este atribuito é do tipo double, no qual mede toda a dimensão do ambiente, em x e y.
 Métodos:
 ObterMapaAmbiente():Este método retorna um mapa do ambiente, que pode ser usado pelo robô de limpeza para navegar e realizar a limpeza de forma eficiente.
-EnviarComandosParaRobo():Este método permite o envio de comandos específicos para um robô de limpeza associado ao ambiente e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
-DetectarSujeira(): Este método detecta a presença de sujeira no ambiente e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro). Pode ser usado para informar ao robô de limpeza que ele precisa iniciar uma sessão de limpeza.
 
 Associação: O Ambiente está associado ao robô de limpeza, pelo fato que o robô realiza todo o mapeamento da área em que vai ser ocorrida a limpeza. Com isso o usuário pode verificar toda sua planta mapeada pelo robô. 
 
 
-Nome da Classe: Aplicativo
+
+Nome da Classe: Interface
 Descrição: Esta classe representa um aplicativo utilizado para controlar e interagir com um ou mais robôs de limpeza. Ela armazena informações sobre a identificação do aplicativo, o nome do aplicativo, a versão do aplicativo e o usuário associado.
 Atributos:
-IdAplicativo: Um número inteiro que identifica unicamente o aplicativo.
 NomeAplicativo: Uma string que especifica o nome do aplicativo, "CleanBot" 
 Versao: Uma string que indica a versão atual do aplicativo, como "1.0" ou "2.1".
 Usuario: Uma string que identifica o usuário do aplicativo.
 Métodos:
-ExibirInterfaceUsuario():Este método exibe a interface de usuário do aplicativo, permitindo ao usuário controlar o robô de limpeza e visualizar informações relevantes. Retorna uma string que representa a interface de usuário.
-EnviarComandosParaRobo():Este método permite ao usuário enviar comandos específicos para o robô de limpeza por meio do aplicativo e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
 ReceberStatusDoRobo():Este método recebe informações de status do robô de limpeza, como nível de bateria, estado atual e modo de limpeza, e retorna essas informações como uma string para exibição no aplicativo.
 
 Associação: O Aplicativo está associado ao robô de limpeza, pelo fato de que todos as ações do mesmo são transmitidas para o aplicativo para o usuário poder acompanhar em tempo real aonde está localizado o robô.
@@ -68,18 +62,30 @@ Associação: O Aplicativo está associado ao robô de limpeza, pelo fato de que
 Nome da Classe: Usuario
 Descrição: Esta classe representa um usuário do sistema, responsável por controlar e interagir com um ou mais robôs de limpeza. Ela armazena informações sobre o usuário, incluindo identificação, nome, email, senha e identificação do robô de limpeza associado.
 Atributos:
-IdUsuario: Um número inteiro que identifica unicamente o usuário.
 NomeUsuario: Uma string que especifica o nome do usuário.
 Email: Uma string que armazena o endereço de email do usuário.
 Senha: Uma string que armazena a senha do usuário.
-RoboDeLimpeza: Um número inteiro que representa a identificação do robô de limpeza associado ao usuário.
 Métodos:
 FazerLogin(): Este método permite ao usuário fazer login no sistema e retorna uma mensagem ou código de status, como "Login bem-sucedido" ou "Credenciais inválidas".
 CadastrarConta():Este método permite ao usuário criar uma nova conta no sistema e retorna uma mensagem ou código de status, como "Conta criada com sucesso" ou "Erro ao cadastrar".
-AgendarLimpeza():Este método permite ao usuário agendar uma sessão de limpeza com um robô de limpeza associado e retorna a data agendada.
-ConfigurarPreferencias(preferencias: Preferencias):Este método permite ao usuário configurar suas preferências no sistema, como preferências de limpeza, e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
-ExibirInterfaceUsuario():Este método exibe a interface de usuário do aplicativo ou sistema, permitindo ao usuário interagir com o robô de limpeza e visualizar informações relevantes.
-EnviarComandosParaRobo():Este método permite ao usuário enviar comandos específicos para o robô de limpeza associado e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
-ReceberStatusDoRobo():Este método recebe informações de status do robô de limpeza, como nível de bateria e estado atual, e retorna essas informações como uma string para exibição pelo usuário.
 	
 Associação: O usuário está associado com o aplicativo, pelo fato de para ter acesso ao robô de limpeza, o mesmo deve estar conectado ao aplicativo para poder receber as informações do robô. 
+
+Nome da Classe: ConfigurarPreferencias
+Descrição:  Esta classe representa a configuração de preferências do usuário, consegue visualizar todos os serviços que já solicitou e ver os estilos de limpeza mais usados.
+Atributos:
+Limpeza: Uma String que descreve a preferencia de limpeza, e os métodos mais utilizados,.
+Métodos:
+AgendarLimpeza () : Este método permite ao usuário agendar uma sessão de limpeza com um robô de limpeza associado e retorna a data agendada.
+ProcessarAgrendamentos(): Este método processa os agendamentos de limpeza programados para os robôs de limpeza no sistema e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
+
+Associação: O usuário está associado com o Configurar Preferencias, pelo fato que seria as preferencias do próprio usuário, do jeito que o usuário mais utiliza o  aplicativo e o modos em qual prefere que seja trabalhado pelo robô.
+
+Nome da Classe: ModoLimpeza
+Descrição: Esta classe representa o modo de limpeza no qual o robô estará operando, com isso podendo escolher vários tipos de limpeza diferente em um determinado ambiente.
+Atributos:
+TipoLimpeza: Uma String que descrve o tipo de limpeza escolhido pelo usuário, como “Limpeza Moderada ou “Limpeza Rápida”
+Métodos:
+TipoSuperficie(): Uma string que descreve o tipo de superfície presente no ambiente, como "Piso de Madeira" ou "Tapete".
+	
+Associação: O Robô de Limpeza está associado a Modo de limpeza, pelo fato de que ele pode funcionar de vários modos diferentes, como velocidade e tipo de limpeza, tudo isso relacionado ao robô. 
