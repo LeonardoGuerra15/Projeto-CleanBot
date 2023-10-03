@@ -11,7 +11,7 @@ IniciarLimpeza(): Este método inicia a limpeza e retorna um código de status (
 PararLimpeza(): Este método para a limpeza em andamento e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
 RetornarEstacaoRecarga():Retorna a estação de recarga mais próxima.
 DetectarSujeira():Este método detecta sujeira no ambiente e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
-GerarComprovante():Este método gera um comproante de agendamento, assim que o robo recebe a confirmação que o usuário.
+GerarComprovante():Este método gera um comproante de agendamento, no qual ele envia para o robo se os dados preenchidos sobre data e horario estão corretos, e assim gerando um comprovante e se retorna verdadeiro ele emite a data e o horario.
 
 Associação: O robô de limpeza está associado a tudo, pelo fato de ser funcionamento, com isso sua associação é ligada ao aplicativo pois ele quem comanda e mande o que precisa ser realizado, com o sistema pois que foi programado, foi o sistema quem desenvolveu, com o ambiente pois realiza o mapeamento da área em que vai ser limpa, e com o usuário seria indiretamente pelo fato que apenas vai realizar o serviço que foi pedido.
 
