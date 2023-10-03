@@ -66,7 +66,9 @@ Associação: O usuário está associado com o aplicativo, pelo fato de para ter
 Nome da Classe: ConfigurarPreferencias
 Descrição:  Esta classe representa a configuração de preferências do usuário, consegue visualizar todos os serviços que já solicitou e ver os estilos de limpeza mais usados.
 Atributos:
-Limpeza: Uma String que descreve a preferencia de limpeza, e os métodos mais utilizados,.
+Limpeza: Uma String que descreve a preferencia de limpeza, e os métodos mais utilizados.
+Data : Esse atributo mosta a data que o usuário indicou para ser a limpeza.
+Hora : Esse atributo mosta a hora que o usuário indicou para ser a limpeza.
 Métodos:
 AgendarLimpeza () : Este método permite ao usuário agendar uma sessão de limpeza com um robô de limpeza associado e retorna a data agendada.
 ProcessarAgrendamentos(): Este método processa os agendamentos de limpeza programados para os robôs de limpeza no sistema e retorna um código de status (por exemplo, 0 para sucesso, 1 para erro).
